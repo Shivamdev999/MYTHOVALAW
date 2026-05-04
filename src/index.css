@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-midnight: #0A192F;
+  --color-slate: #112240;
+  --color-light-slate: #233554;
+  --color-cyan: #64FFDA;
+  --color-white: #E6F1FF;
+  --color-white-pure: #FFFFFF;
+
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-midnight);
+  color: var(--color-white);
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-panel {
+  background: rgba(17, 34, 64, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(100, 255, 218, 0.1);
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+}
+
+.cyan-glow {
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.15);
+}
+
+.cyan-glow-hover {
+  transition: all 0.3s ease;
+}
+
+.cyan-glow-hover:hover {
+  box-shadow: 0 0 20px rgba(100, 255, 218, 0.3);
+  border-color: rgba(100, 255, 218, 0.4);
+  transform: translateY(-5px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-midnight); 
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-light-slate); 
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-cyan); 
+}
